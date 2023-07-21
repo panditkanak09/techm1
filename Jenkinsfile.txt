@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+    stages {
+        stage('Print Academic Details') {
+            steps {
+                script {
+                    def name = "Your Name"
+                    def branch = "Your Branch"
+                    def regNo = "Your Registration Number"
+                    def subjects = "Subject1, Subject2, Subject3" // Add your subjects separated by commas
+                    def certifications = "Certification1, Certification2" // Add your certifications separated by commas
+                    
+                    echo "Name: ${name}"
+                    echo "Branch: ${branch}"
+                    echo "Registration Number: ${regNo}"
+                    echo "Subjects: ${subjects}"
+                    echo "Extra Certifications: ${certifications}"
+                }
+            }
+        }
+    }
+}
